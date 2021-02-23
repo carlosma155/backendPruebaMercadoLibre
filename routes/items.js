@@ -15,8 +15,7 @@ function itemsApi(app) {
             const items = await itemsService.getItems({ tags })
 
             res.status(200).json({
-                data: items,
-                message: 'items listed'
+                data: items
             })
         } catch (error) {
             next(error)
@@ -31,8 +30,7 @@ function itemsApi(app) {
             const item = await itemsService.getItem({ itemId })
 
             res.status(200).json({
-                data: item, 
-                message: 'item retrieved'
+                data: item
             })
         } catch (error) {
             next(error)
